@@ -1,0 +1,170 @@
+/* Basic Styles for the Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: #000;
+    box-shadow: 0px 2px 4px 3px #80808024
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-menu {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .user-name {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .initial {
+    background-color: var(--primaryColor);
+    color: #f9f9f9;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+  }
+  .logoinitial{
+    background-color: var(--primaryColor);
+    color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 8px;
+    width: 35px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+  }
+  
+  .full-name {
+    margin-right: 8px;
+  }
+  
+  .dropdown-arrow {
+    margin-left: 5px;
+    font-size: 18px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #f3eded;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .menu-icon {
+    color: #000;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it sits on top */
+  }
+  
+  .mobile-item {
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .mobile-item:hover {
+    background-color: #444;
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .menu-items {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  
+    .mobile-menu {
+      display: block;
+      width: 95%;
+      top: 10%;
+      right: 1%;
+    }
+    .mobile-menu .logo{
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .stepper{
+      display: inline-flex;
+      justify-content: left !important;
+      margin-bottom: 20px;
+      position: relative;
+      width: 100%;
+      overflow: auto;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      flex: 1;
+      text-align: center;
+      min-width: 170px;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 320px) {
+  .logo {
+      display: none;
+    }
+  }
+  
